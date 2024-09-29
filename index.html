@@ -18,40 +18,28 @@
             margin-top: 20px;
         }
 
-
-    .rounded-image {
-        border-radius: 50%;
-        border: 2px solid black;
-        height: 50px;
-        width: 50px;
-    }
-</style>
-
-
-
-
-
-
+        .rounded-image {
+            border-radius: 50%;
+            border: 2px solid black;
+            height: 50px;
+            width: 50px;
+        }
     </style>
 </head>
 <body>
     <div class="container text-center">
         <img src="https://i.imgur.com/AHpFEFI.jpeg" class="img-thumbnail rounded-circle border-dark" height="50" width="50" alt="Imagem Redonda">
-
        
         <h1 class="mb-4">Localizador de Alvo</h1>
-         <b>Coder: <a href="t.me/D3SERT0RA">D3SERT0RA<a>;<a href="https://github.com/realkooper77">realkooper77<a><b> <br>
-        <b>Facção: #S.T Albania<b>
-          <p>
-          <p>  
+        <b>Coder: <a href="https://t.me/D3SERT0RA">D3SERT0RA</a>; <a href="https://github.com/realkooper77">realkooper77</a></b> <br>
+        <b>Facção: #S.T Albania</b>
         <p>Insira um endereço IP para encontrar o Alvo</p>
         <div class="input-group mb-3 w-50 mx-auto">
             <input type="text" id="ip-input" class="form-control" placeholder="Digite o endereço IP" aria-label="Endereço IP">
             <button class="btn btn-primary btn-block" id="find-location">Encontrar Localização</button>
         </div>
 
-<button class="btn btn-primary mt-4" onclick="window.location.reload();">Nova Pesquisa</button>
-
+        <button class="btn btn-primary mt-4" onclick="window.location.reload();">Nova Pesquisa</button>
 
         <div id="result" class="text-muted"></div>
         <div id="map"></div>
@@ -65,7 +53,7 @@
     <script>
         document.getElementById('find-location').addEventListener('click', function () {
             const ip = document.getElementById('ip-input').value;
-            const apiURL = `http://ip-api.com/json/${ip}`;
+            const apiURL = `https://ip-api.com/json/${ip}`;
 
             fetch(apiURL)
                 .then(response => response.json())
@@ -98,8 +86,6 @@
         });
     </script>
 
-
-Grupo: <a href="https://t.me/sintoniaalbania">S.T Albania<a>
-
+    <p>Grupo: <a href="https://t.me/sintoniaalbania">S.T Albania</a></p>
 </body>
 </html>
