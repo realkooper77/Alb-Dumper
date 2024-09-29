@@ -1,1 +1,105 @@
-oi
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Localizador de IP</title>
+    <!-- Bootstrap CSS para estilo e responsividade -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Leaflet CSS para o mapa -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        body {
+            background-color: #f8f9fa;
+            padding-top: 50px;
+        }
+        #map {
+            height: 400px;
+            margin-top: 20px;
+        }
+
+
+    .rounded-image {
+        border-radius: 50%;
+        border: 2px solid black;
+        height: 50px;
+        width: 50px;
+    }
+</style>
+
+
+
+
+
+
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <img src="https://i.imgur.com/AHpFEFI.jpeg" class="img-thumbnail rounded-circle border-dark" height="50" width="50" alt="Imagem Redonda">
+
+       
+        <h1 class="mb-4">Localizador de Alvo</h1>
+         <b>Coder: <a href="t.me/D3SERT0RA">D3SERT0RA<a>;<a href="https://github.com/realkooper77">realkooper77<a><b> <br>
+        <b>Facção: #S.T Albania<b>
+          <p>
+          <p>  
+        <p>Insira um endereço IP para encontrar o Alvo</p>
+        <div class="input-group mb-3 w-50 mx-auto">
+            <input type="text" id="ip-input" class="form-control" placeholder="Digite o endereço IP" aria-label="Endereço IP">
+            <button class="btn btn-primary btn-block" id="find-location">Encontrar Localização</button>
+        </div>
+
+<button class="btn btn-primary mt-4" onclick="window.location.reload();">Nova Pesquisa</button>
+
+
+        <div id="result" class="text-muted"></div>
+        <div id="map"></div>
+    </div>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Leaflet JS -->
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <!-- Script para buscar a localização e exibir no mapa -->
+    <script>
+        document.getElementById('find-location').addEventListener('click', function () {
+            const ip = document.getElementById('ip-input').value;
+            const apiURL = `http://ip-api.com/json/${ip}`;
+
+            fetch(apiURL)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.status === "fail") {
+                        document.getElementById('result').innerHTML = "Erro: IP inválido ou não encontrado.";
+                        return;
+                    }
+
+                    const lat = data.lat;
+                    const lon = data.lon;
+                    document.getElementById('result').innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
+
+                    // Inicializando o mapa no local fornecido
+                    const map = L.map('map').setView([lat, lon], 13);
+
+                    // Adicionando o layer do mapa (OpenStreetMap)
+                    L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                        attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
+                    }).addTo(map);
+
+                    // Adicionando o marcador no local
+                    L.marker([lat, lon]).addTo(map)
+                        .bindPopup(`Localização do IP: ${ip}<br>Latitude: ${lat}<br>Longitude: ${lon}`)
+                        .openPopup();
+                })
+                .catch(error => {
+                    document.getElementById('result').innerHTML = "Erro ao buscar a localização.";
+                });
+        });
+    </script>
+
+
+Grupo: <a href="https://t.me/sintoniaalbania">S.T Albania<a>
+
+</body>
+</html>
