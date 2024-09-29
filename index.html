@@ -53,18 +53,20 @@
     <script>
         document.getElementById('find-location').addEventListener('click', function () {
             const ip = document.getElementById('ip-input').value;
-            const apiURL = `https://ip-api.com/json/${ip}`;
+            const apiURL = `https://ipinfo.io/${ip}/geo?token=YOUR_TOKEN_HERE`;
 
             fetch(apiURL)
                 .then(response => response.json())
                 .then(data => {
-                    if (data.status === "fail") {
+                    if (data.error) {
                         document.getElementById('result').innerHTML = "Erro: IP inválido ou não encontrado.";
                         return;
                     }
 
-                    const lat = data.lat;
-                    const lon = data.lon;
+                    const loc = data.loc.split(',');
+                    const lat = parseFloat(loc[0]);
+                    const lon = parseFloat(loc[1]);
+
                     document.getElementById('result').innerHTML = `Latitude: ${lat}, Longitude: ${lon}`;
 
                     // Inicializando o mapa no local fornecido
@@ -82,6 +84,7 @@
                 })
                 .catch(error => {
                     document.getElementById('result').innerHTML = "Erro ao buscar a localização.";
+                    console.error(error);
                 });
         });
     </script>
