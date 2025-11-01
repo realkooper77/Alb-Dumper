@@ -1,0 +1,16 @@
+body {
+    font-family: Arial, sans-serif;
+    text-align: center;
+}
+
+#temporizador {
+    font-size: 36px;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+#temporizador span {
+    font-size: 48px;
+    color: #ff69b4;
+}
+
